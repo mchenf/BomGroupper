@@ -7,6 +7,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Diagnostics;
 using Microsoft.Office.Interop.Excel;
+using System.Windows.Forms;
 
 namespace BomGroupper
 {
@@ -57,6 +58,23 @@ namespace BomGroupper
         {
             Excel.Worksheet asheet = Globals.ThisAddIn.Application.ActiveSheet as Excel.Worksheet;
             ClearOutline(asheet);
+
+
+        }
+
+        private void button3_Click(object sender, RibbonControlEventArgs e)
+        {
+            DialogResult r = MessageBox.Show
+                ("本次操作将会覆盖当前工作表表内所有字体样式，请谨慎操作。依然要继续吗？", 
+                "不可逆操作，请确认", 
+                MessageBoxButtons.OKCancel, 
+                MessageBoxIcon.Warning);
+
+            if (r == DialogResult.Cancel)
+            {
+                return;
+            }
+            //TODO: Complete font logic.
 
 
         }
