@@ -20,12 +20,22 @@ namespace BomGroupper
             result = -1;
             if (string.IsNullOrEmpty(level)) return false;
 
+            int len = level.Length;
+            if (len < 2) return false;
 
+            if(!level.StartsWith(".")) { return false; }
 
+            int i = 0;
+            while (level[i] == '.')
+            {
+                i++;
+            }
 
+            string shouldBe = GetLevelString(i);
 
+            if (shouldBe != level) return false;
 
-
+            result = i;
             return true;
         }
     }
