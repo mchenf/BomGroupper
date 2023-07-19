@@ -16,5 +16,19 @@ namespace BomGroupper
 
             return new string('.', length) + length.ToString();
         }
+
+        public static bool TryParseLevel(string level, out int result)
+        {
+            result = -1;
+            if (string.IsNullOrEmpty(level)) return false;
+
+
+
+
+
+
+
+            return true;
+        }
     }
 }
