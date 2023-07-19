@@ -185,6 +185,7 @@
     <Compile Include="BomGroupperRibon.Designer.cs">
       <DependentUpon>BomGroupperRibon.cs</DependentUpon>
     </Compile>
+    <Compile Include="LevelGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
