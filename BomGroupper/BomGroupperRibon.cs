@@ -74,7 +74,7 @@ namespace BomGroupper
             {
                 return;
             }
-            //TODO: Complete font logic.
+            
 
 
         }
