@@ -80,12 +80,12 @@ namespace BomGroupper
 
             int rows = UsedArea.Rows.Count;
 
+
+
             for (int i = 1; i <= rows; i++)
             {
                 Excel.Range targetRow = UsedArea.Rows[i];
-                Debug.Print($"checking target row {targetRow.Cells[1, 1].Address}");
                 string levelStr = targetRow.Cells[1, 1].Value2 as string;
-                Debug.Print(levelStr);
                 if(LevelGenerator.TryParseLevel(levelStr, out int level))
                 {
                     double fontSize = 30 - 3 * level;
