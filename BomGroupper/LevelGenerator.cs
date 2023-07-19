@@ -8,13 +8,11 @@ namespace BomGroupper
 {
     public static class LevelGenerator
     {
-        public static string GetLevelString(int length)
+        public static string GetLevelString(int level)
         {
-            if (length < 2) return string.Empty;
+            if (level < 1) return string.Empty;
 
-            length--;
-
-            return new string('.', length) + length.ToString();
+            return new string('.', level) + level.ToString();
         }
 
         public static bool TryParseLevel(string level, out int result)
