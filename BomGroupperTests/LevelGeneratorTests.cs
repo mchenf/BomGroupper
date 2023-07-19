@@ -12,10 +12,12 @@ namespace BomGroupper.Tests
     public class LevelGeneratorTests
     {
         [TestMethod()]
-        [DataRow(2, ".1")]
-        [DataRow(4, "...3")]
-        [DataRow(7, "......6")]
+        [DataRow(1, ".1")]
+        [DataRow(3, "...3")]
+        [DataRow(6, "......6")]
         [DataRow(0, "")]
+        [DataRow(13, ".............13")]
+        [DataRow(113, ".................................................................................................................113")]
         public void GetLevelStringTest(int input, string expected)
         {
             string actual = LevelGenerator.GetLevelString(input);
